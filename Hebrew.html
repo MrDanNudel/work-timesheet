@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>יומן עבודה חודשי</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>חודש</th>
+          <td></td>
+          <th>שם העובד</th>
+          <td></td>
+          <th style="text-align: left">תמונת החברה</th>
+        </tr>
+        <tr>
+          <th>תאריך</th>
+          <th>מקום עבודה</th>
+          <th>שעת התחלה</th>
+          <th>שעת סיום</th>
+          <th>סה"כ שעות</th>
+          <th>תחילת פיצול</th>
+          <th>סיום פיצול</th>
+          <th>סה"כ פיצול</th>
+          <th>סה"כ שעות נוספות</th>
+          <th>שינה</th>
+          <th>מרחק בק"מ</th>
+          <th>עלות נסיעה</th>
+          <th>מנהל נסיעה</th>
+          <th>חתימה</th>
+          <th>מספר טלפון של מנהל נסיעה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- יצירת 31 שורות עבור התאריכים -->
+        <script>
+          for (let i = 1; i <= 31; i++) {
+            document.write(`<tr><td>${i}</td>`);
+            for (let j = 0; j < 14; j++) {
+              document.write("<td></td>");
+            }
+            document.write("</tr>");
+          }
+        </script>
+      </tbody>
+    </table>
+  </body>
+</html>
