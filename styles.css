@@ -10,37 +10,61 @@ table {
   border-collapse: collapse;
   margin-bottom: 20px;
   background-color: #ffffff;
+  table-layout: fixed; /* Ensure fixed table layout for better column distribution */
 }
 
-/* Increase the height of each <td> by doubling its current padding */
+/* Adjust the width for each column */
+th,
 td {
-  padding: 20px; /* Adjusted padding to make each <td> taller */
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px; /* Reduced padding for better column fit */
+}
+
+td {
+  width: 6%; /* Adjust the width for each <td> to make it smaller */
+}
+
+th.date,
+td.date {
+  width: 5%; /* Adjusted width for date column */
+}
+
+th.work-location,
+td.work-location,
+th.start-time,
+td.start-time,
+th.end-time,
+td.end-time,
+th.total-hours,
+td.total-hours,
+th.split-start,
+td.split-start,
+th.split-end,
+td.split-end,
+th.total-split,
+td.total-split,
+th.total-overtime,
+td.total-overtime,
+th.sleep,
+td.sleep,
+th.distance,
+td.distance,
+th.travel-cost,
+td.travel-cost,
+th.travel-manager,
+td.travel-manager,
+th.signature,
+td.signature,
+th.manager-phone,
+td.manager-phone {
+  width: 6%; /* Adjusting other columns to have the same smaller width */
 }
 
 /* For the header table */
 #header-table th,
 #header-table td {
   padding: 10px; /* Optional: Ensure the header table padding stays consistent */
-}
-
-/* Ensure that the first column (תאריך) is still properly aligned */
-th.date,
-td.date {
-  width: 10%; /* Adjust the width for the date column */
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-th {
-  background-color: #f0f0f0;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
 }
 
 /* Resize the logo image */
@@ -56,6 +80,8 @@ tr:nth-child(even) {
   background-color: #eaeaea;
   border-radius: 8px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #upload-section h3 {

@@ -27,7 +27,7 @@
       <thead>
         <tr>
           <th class="date">תאריך</th>
-          <th class="work-location">מקום עבודה</th>
+          <th class="work-location">מקום התייצבות</th>
           <th class="start-time">שעת התייצבות</th>
           <th class="end-time">שעת סיום</th>
           <th class="total-hours">סה"כ שעות</th>
@@ -44,13 +44,11 @@
         </tr>
       </thead>
       <tbody>
-        <!-- 31 rows for the work log -->
         <script>
           for (let i = 1; i <= 31; i++) {
             document.write(`<tr>`);
             for (let j = 0; j < 15; j++) {
-              <!-- Increased the number of columns to include manager-phone -->
-              document.write(`<td class="empty"></td>`); // Empty cells for each day
+              document.write(`<td class="empty"></td>`);
             }
             document.write(`</tr>`);
           }
