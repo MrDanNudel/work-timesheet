@@ -27,6 +27,25 @@ tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-th[style="text-align: left;"] {
-  text-align: left;
+/* Resize the logo image */
+.company-logo {
+  max-width: 80px; /* Adjust the width of the logo image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Resize the logo container to take less space */
+
+/* Ensures 'תאריך' and 'שם העובד' take more space */
+th[style="width:50%;"] {
+  width: 20%;
+}
+
+/* Ensures the input fields for 'תאריך' take up more space in the body as well */
+td[style="width: 20%"] {
+  width: 20%;
+}
+
+/* Adjusts the first table */
+table:first-of-type {
+  margin-bottom: 20px;
 }

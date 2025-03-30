@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Separate Table for "חודש", "שם העובד", and "תמונת החברה" -->
     <table>
       <thead>
         <tr>
-          <th>חודש</th>
+          <th colspan="1" style="text-align: right">
+            <img src="logo_temp.jpg" class="company-logo" />
+          </th>
+          <th style="width: 20%">חודש</th>
           <td></td>
-          <th>שם העובד</th>
+          <th style="width: 20%">שם העובד</th>
           <td></td>
-          <th style="text-align: left">תמונת החברה</th>
         </tr>
+      </thead>
+    </table>
+
+    <!-- Main Table for the Work Log -->
+    <table>
+      <thead>
         <tr>
-          <th>תאריך</th>
+          <th style="width: 20%">תאריך</th>
           <th>מקום עבודה</th>
           <th>שעת התחלה</th>
           <th>שעת סיום</th>
@@ -35,10 +44,10 @@
         </tr>
       </thead>
       <tbody>
-        <!-- יצירת 31 שורות עבור התאריכים -->
+        <!-- Create 31 rows for the dates -->
         <script>
           for (let i = 1; i <= 31; i++) {
-            document.write(`<tr><td>${i}</td>`);
+            document.write(`<tr><td style="width: 20%">${i}</td>`);
             for (let j = 0; j < 14; j++) {
               document.write("<td></td>");
             }
