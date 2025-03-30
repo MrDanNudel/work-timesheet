@@ -12,9 +12,25 @@ table {
   background-color: #ffffff;
 }
 
+/* Increase the height of each <td> by doubling its current padding */
+td {
+  padding: 20px; /* Adjusted padding to make each <td> taller */
+}
+
+/* For the header table */
+#header-table th,
+#header-table td {
+  padding: 10px; /* Optional: Ensure the header table padding stays consistent */
+}
+
+/* Ensure that the first column (תאריך) is still properly aligned */
+th.date,
+td.date {
+  width: 10%; /* Adjust the width for the date column */
+}
+
 th,
 td {
-  padding: 10px;
   border: 1px solid #ddd;
   text-align: center;
 }
@@ -33,19 +49,35 @@ tr:nth-child(even) {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Resize the logo container to take less space */
-
-/* Ensures 'תאריך' and 'שם העובד' take more space */
-th[style="width:50%;"] {
-  width: 20%;
+/* File upload section styling */
+#upload-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  text-align: center;
 }
 
-/* Ensures the input fields for 'תאריך' take up more space in the body as well */
-td[style="width: 20%"] {
-  width: 20%;
+#upload-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Adjusts the first table */
-table:first-of-type {
-  margin-bottom: 20px;
+#upload-section input[type="file"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#submit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #45a049;
 }

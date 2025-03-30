@@ -7,54 +7,64 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Separate Table for "חודש", "שם העובד", and "תמונת החברה" -->
-    <table>
+    <!-- Header Table for Logo and Employee Information -->
+    <table id="header-table">
       <thead>
         <tr>
           <th colspan="1" style="text-align: right">
             <img src="logo_temp.jpg" class="company-logo" />
           </th>
-          <th style="width: 20%">חודש</th>
-          <td></td>
-          <th style="width: 20%">שם העובד</th>
-          <td></td>
+          <th class="month">חודש</th>
+          <td class="month"></td>
+          <th class="employee-name">שם העובד</th>
+          <td class="employee-name"></td>
         </tr>
       </thead>
     </table>
 
-    <!-- Main Table for the Work Log -->
-    <table>
+    <!-- Main Table for Work Log -->
+    <table id="work-log-table">
       <thead>
         <tr>
-          <th style="width: 20%">תאריך</th>
-          <th>מקום עבודה</th>
-          <th>שעת התחלה</th>
-          <th>שעת סיום</th>
-          <th>סה"כ שעות</th>
-          <th>תחילת פיצול</th>
-          <th>סיום פיצול</th>
-          <th>סה"כ פיצול</th>
-          <th>סה"כ שעות נוספות</th>
-          <th>שינה</th>
-          <th>מרחק בק"מ</th>
-          <th>עלות נסיעה</th>
-          <th>מנהל נסיעה</th>
-          <th>חתימה</th>
-          <th>מספר טלפון של מנהל נסיעה</th>
+          <th class="date">תאריך</th>
+          <th class="work-location">מקום עבודה</th>
+          <th class="start-time">שעת התייצבות</th>
+          <th class="end-time">שעת סיום</th>
+          <th class="total-hours">סה"כ שעות</th>
+          <th class="split-start">תחילת פיצול</th>
+          <th class="split-end">סיום פיצול</th>
+          <th class="total-split">סה"כ פיצול</th>
+          <th class="total-overtime">סה"כ שעות נוספות</th>
+          <th class="sleep">שינה</th>
+          <th class="distance">מרחק בק"מ</th>
+          <th class="travel-cost">עלות נסיעה</th>
+          <th class="travel-manager">מנהל נסיעה</th>
+          <th class="signature">חתימה</th>
+          <th class="manager-phone">מספר טלפון של מנהל נסיעה</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Create 31 rows for the dates -->
+        <!-- 31 rows for the work log -->
         <script>
           for (let i = 1; i <= 31; i++) {
-            document.write(`<tr><td style="width: 20%">${i}</td>`);
-            for (let j = 0; j < 14; j++) {
-              document.write("<td></td>");
+            document.write(`<tr>`);
+            for (let j = 0; j < 15; j++) {
+              <!-- Increased the number of columns to include manager-phone -->
+              document.write(`<td class="empty"></td>`); // Empty cells for each day
             }
-            document.write("</tr>");
+            document.write(`</tr>`);
           }
         </script>
       </tbody>
     </table>
+
+    <!-- File upload section -->
+    <div id="upload-section">
+      <h3>Upload Data</h3>
+      <input type="file" id="file-upload" />
+      <button id="submit-button">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
